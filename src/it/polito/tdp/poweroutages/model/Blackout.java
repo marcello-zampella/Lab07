@@ -53,7 +53,7 @@ public class Blackout {
 	}
 	@Override
 	public String toString() {
-		return "Blackout "+id+" " + dataInizio+"  "+dataFine;
+		return "Blackout "+id+" " + dataInizio+"  "+dataFine+" "+this.oredifferenza;
 	}
 	public int getId() {
 		return id;

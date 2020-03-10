@@ -32,7 +32,6 @@ public class PowerOutagesController {
     void doAnalysis(ActionEvent event) {
     	this.txtOutput.clear();
     	List<Blackout> soluzioni= model.trovaSoluzioni(Integer.parseInt(this.txtYears.getText()),Integer.parseInt(this.txtMaxHours.getText()),this.nercMenu.getValue());
-    	System.out.println(soluzioni);
     	this.txtOutput.appendText("IL NUMERO DI PERSONE COINVOLTE E': "+personecoinvolte(soluzioni)+"\n");
     	this.txtOutput.appendText("IL NUMERO DI ORE CONSIDERATO E' "+contegioOre(soluzioni) +"\n");
     	String s="";

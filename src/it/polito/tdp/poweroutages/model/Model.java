@@ -56,7 +56,7 @@ public class Model {
 			return;
 		}
 		// condizione di fine
-		if(totOre(parziale)<max_ore) {
+		if(totOre(parziale)<=max_ore) {
 			int prova=personecoinvolte(parziale);
 			
 			if(personecoinvolte(parziale)>bestPersoneCoinvolte) {
@@ -69,11 +69,11 @@ public class Model {
 		for(int i=0;i<blackouts.size();i++) {
 			Blackout b=blackouts.get(i);
 			
-			if(livello==0 ) {
+		//	if(livello==0 ) {
 
-				if(!blackouts.get(0).equals(b))
-					blackouts.remove(0);
-			}	
+		//		if(!blackouts.get(0).equals(b))
+		//			blackouts.remove(0);
+		//	}	
 			if(!parziale.contains(b)) {
 				parziale.add(b);
 				espandi(parziale,livello+1,blackouts);

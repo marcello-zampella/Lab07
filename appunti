@@ -1,0 +1,10 @@
+Ho provato alcuni tipi di ottimizzazione, ho cancellato dall'elenco di tutti i blackout che mi interessavano, quelli con un numero di ore paria a 
+0, perchè quelli vanno aggiunti in ogni caso e sarebbero stati calcolati inutilmente (alla fine comunque li ho reinseriti nella lista best).
+Ho tolto tuttte quelle istanze che da sole superavano il numero massimo di ore consentite.
+
+
+(ciò che è scritto successivamente è stato tolto, comprometteva la ricerca dell'ottimo, mai togliere un elemento quando ne si cicla la lista9
+ Ho agito sul livello 0, ogni volta che mi trovo al livello 0, mi chiedo se è la prima volta. Se non lo è elimino dalla lista dei blackouts possibili
+quello che c'è stato precedentemente, perchè avrò fatto tutti le combinazioni con lui
+ES: se ho gli elementi A B C D, la prima volta al livello 0 metto A.
+La seconda volta ci sarà B, ma è inutile andarlo a ombinare anche con A, perchè sono cose che ho già visto, quindi elimino A.
