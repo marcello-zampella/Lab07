@@ -17,6 +17,7 @@ public class Model {
 	private int max_ore;
 	private int max_anno;
 	private int bestPersoneCoinvolte;
+	private int k;
 	private ArrayList<Blackout> best;
 	public Model() {
 		podao = new PowerOutageDAO();
@@ -28,9 +29,11 @@ public class Model {
 
 
 	public ArrayList<Blackout> trovaSoluzioni(int max_anno, int max_ore, Nerc nerc) {
+		k=0;
 		this.max_anno=max_anno;
 		this.max_ore=max_ore;
 		this.bestPersoneCoinvolte=0;
+		best=new ArrayList<Blackout>();
 		BlackoutDAO bdao=new BlackoutDAO();
 		ArrayList<Blackout> blackouts =new ArrayList<Blackout>(bdao.getBlackout(nerc));
 		ArrayList<Blackout> temp=new ArrayList<Blackout>();
@@ -45,10 +48,12 @@ public class Model {
 		LinkedList<Blackout> parziale= new LinkedList<Blackout>();
 		espandi(parziale,0,blackouts);
 		best.addAll(bvuoti); //aggiungo gli 0 tolti prima
+		System.out.println(k);
 		return best;
 	}
 
 	private void espandi(LinkedList<Blackout> parziale, int livello, ArrayList<Blackout> blackouts) {
+		k++;
 		if(parziale.size()>2&& totAnno(parziale)>max_anno) {
 			return;
 		}

@@ -39,6 +39,7 @@ public class PowerOutagesController {
     		s+=b.toString()+"\n";
     	}
     	this.txtOutput.appendText(s);
+    	System.out.println(System.nanoTime()/1e6);
     }
     
 	private int personecoinvolte(List<Blackout> parziale) {
