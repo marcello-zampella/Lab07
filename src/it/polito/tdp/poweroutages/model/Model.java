@@ -1,13 +1,11 @@
 package it.polito.tdp.poweroutages.model;
 
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-
-import it.polito.tdp.poweroutages.model.*;
-
 import it.polito.tdp.poweroutages.db.BlackoutDAO;
 import it.polito.tdp.poweroutages.db.PowerOutageDAO;
 

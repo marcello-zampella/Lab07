@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.time.*;
 
-import it.polito.tdp.poweroutages.model.Blackout;
 import it.polito.tdp.poweroutages.model.Nerc;
+
+import java.time.*;
 
 public class BlackoutDAO {	
 	public List<Blackout> getBlackout(Nerc nerc) {
