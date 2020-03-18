@@ -2,7 +2,7 @@ package it.polito.tdp.poweroutages.model;
 
 import java.time.LocalDate;
 
-public class Blackout {
+ public class Blackout {
 	private Nerc nerc;
 	private int customer_affected;
 	private LocalDate dataInizio;

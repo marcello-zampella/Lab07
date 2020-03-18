@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import it.polito.tdp.poweroutages.model.Blackout;
 import it.polito.tdp.poweroutages.model.Nerc;
 
 import java.time.*;
