@@ -1,6 +1,5 @@
 package it.polito.tdp.poweroutages;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import it.polito.tdp.poweroutages.model.Blackout;
